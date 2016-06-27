@@ -93,7 +93,7 @@ client = BaseCRM::Client.new(access_token: "<YOUR_PERSONAL_ACCESS_TOKEN>")
 coffeeshop = client.contacts.where(name: "Coffee Shop")
 
 deal = client.deals.create(name: "Website redesign", contact_id: coffeeshop.id)
-deal.value = 1000
+deal.value = 1000.10
 deal.currency = "USD"
 
 client.deals.update(deal) # => BaseCRM::Deal
